@@ -105,7 +105,8 @@
             Cursor="Hand"
             FontFamily="Comic Sans MS"
             FontSize="14"
-            Foreground="#3F2A1D" />
+            Foreground="#3F2A1D"
+            ToolTip="Нажмите для входа в приложение!" />
         <Button
             x:Name="BtnHelpUser"
             Grid.Row="2"
@@ -118,7 +119,8 @@
             BorderThickness="2"
             Content="Нужна помощь?"
             Cursor="Hand"
-            FontSize="14" />
+            FontSize="14"
+            ToolTip="Нажмите для отправки отзыва о словаре!" />
         <Button
             x:Name="BtnRegUser"
             Grid.Row="2"
@@ -133,7 +135,8 @@
             Content="Регистрация"
             Cursor="Hand"
             FontSize="14"
-            Foreground="#3F2A1D" />
+            Foreground="#3F2A1D"
+            ToolTip="Нажмите для регистрации нового пользователя в приложении!" />
         <Label
             x:Name="LbLoginUser"
             Grid.Row="1"
