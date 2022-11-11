@@ -23,5 +23,11 @@ namespace Uchebka4KyrsKrasnov.RegAndLog
         {
             InitializeComponent();
         }
+
+        private void BtnRegUser_Click(object sender, RoutedEventArgs e)
+        {
+            WinReg winReg = new WinReg();
+            winReg.ShowDialog();
+        }
     }
 }

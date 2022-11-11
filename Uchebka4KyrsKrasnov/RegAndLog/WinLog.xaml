@@ -5,7 +5,6 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Uchebka4KyrsKrasnov.RegAndLog"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    x:Name="Winlog"
     Title="Добро пожаловать!"
     Width="800"
     Height="450"
@@ -136,7 +135,7 @@
             Cursor="Hand"
             FontSize="14"
             Foreground="#3F2A1D"
-            ToolTip="Нажмите для регистрации нового пользователя в приложении!" />
+            ToolTip="Нажмите для регистрации нового пользователя в приложении!" Click="BtnRegUser_Click" />
         <Label
             x:Name="LbLoginUser"
             Grid.Row="1"
