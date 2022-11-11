@@ -155,7 +155,7 @@
         <Button
             x:Name="Btnback"
             Grid.Column="1"
-            Margin="612,579,0,0"
+            Margin="592,562,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Background="#F2EBE9"
