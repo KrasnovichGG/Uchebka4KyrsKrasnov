@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AllWindows\WinHelp.xaml.cs">
+      <DependentUpon>WinHelp.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RegAndLog\WinLog.xaml.cs">
       <DependentUpon>WinLog.xaml</DependentUpon>
     </Compile>
@@ -73,6 +76,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="AllWindows\WinHelp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RegAndLog\WinLog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

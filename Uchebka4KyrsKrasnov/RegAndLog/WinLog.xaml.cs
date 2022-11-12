@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Uchebka4KyrsKrasnov.AllWindows;
 
 namespace Uchebka4KyrsKrasnov.RegAndLog
 {
@@ -28,6 +29,12 @@ namespace Uchebka4KyrsKrasnov.RegAndLog
         {
             WinReg winReg = new WinReg();
             winReg.ShowDialog();
+        }
+
+        private void BtnHelpUser_Click(object sender, RoutedEventArgs e)
+        {
+            WinHelp winHelp = new WinHelp();
+            winHelp.ShowDialog();
         }
     }
 }

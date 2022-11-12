@@ -12,19 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Uchebka4KyrsKrasnov.RegAndLog
+namespace Uchebka4KyrsKrasnov.AllWindows
 {
     /// <summary>
-    /// Логика взаимодействия для WinReg.xaml
+    /// Логика взаимодействия для WinHelp.xaml
     /// </summary>
-    public partial class WinReg : Window
+    public partial class WinHelp : Window
     {
-        public WinReg()
+        public WinHelp()
         {
             InitializeComponent();
         }
 
-        private void Btnback_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }
