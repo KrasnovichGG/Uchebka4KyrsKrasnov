@@ -35,8 +35,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -60,6 +70,36 @@
     </Compile>
     <Compile Include="AllWindows\WinUserProf.xaml.cs">
       <DependentUpon>WinUserProf.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DBword\Auth.cs">
+      <DependentUpon>ModelWORDdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBword\ModelWORDdb.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelWORDdb.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBword\ModelWORDdb.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelWORDdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBword\ModelWORDdb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelWORDdb.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DBword\Role.cs">
+      <DependentUpon>ModelWORDdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBword\sysdiagrams.cs">
+      <DependentUpon>ModelWORDdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBword\User.cs">
+      <DependentUpon>ModelWORDdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBword\Word.cs">
+      <DependentUpon>ModelWORDdb.tt</DependentUpon>
     </Compile>
     <Compile Include="RegAndLog\WinLog.xaml.cs">
       <DependentUpon>WinLog.xaml</DependentUpon>
@@ -114,6 +154,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="DBword\ModelWORDdb.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelWORDdb.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DBword\ModelWORDdb.edmx.diagram">
+      <DependentUpon>ModelWORDdb.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -122,9 +170,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DBword\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Images\Icons.png" />
   </ItemGroup>
@@ -163,6 +209,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\3UP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DBword\ModelWORDdb.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelWORDdb.Context.cs</LastGenOutput>
+      <DependentUpon>ModelWORDdb.edmx</DependentUpon>
+    </Content>
+    <Content Include="DBword\ModelWORDdb.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelWORDdb.edmx</DependentUpon>
+      <LastGenOutput>ModelWORDdb.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

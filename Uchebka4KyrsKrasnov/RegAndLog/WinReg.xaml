@@ -145,7 +145,7 @@
             Background="#F2EBE9"
             BorderBrush="Black"
             BorderThickness="2"
-            Content="Добавить фото" />
+            Content="Добавить фото" Click="BtnAddImageToWin_Click" />
         <Button
             x:Name="BtnSaveDB"
             Grid.Column="1"
