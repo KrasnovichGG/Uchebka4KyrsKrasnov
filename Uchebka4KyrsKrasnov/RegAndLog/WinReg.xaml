@@ -120,9 +120,10 @@
             Margin="31,135,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
+            Background="#F2EBE9"
             BorderBrush="Black"
             BorderThickness="2">
-            <Image x:Name="Image_USER" />
+            <Image x:Name="Image_USER"  />
         </Border>
         <Label
             x:Name="lbImageUser"
@@ -161,8 +162,8 @@
             x:Name="Btnback"
             Grid.Column="1"
             Width="60"
-            Height="35"
-            Margin="546,542,0,0"
+            Height="34"
+            Margin="525,536,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Background="#F2EBE9"

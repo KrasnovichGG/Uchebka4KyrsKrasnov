@@ -6,107 +6,224 @@
     xmlns:local="clr-namespace:Uchebka4KyrsKrasnov.AllWindows"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="Оставьте отзыв"
-    Width="820"
-    Height="479"
+    Width="1100"
+    Height="648"
     FontFamily="Comic Sans MS"
     FontSize="15"
     Icon="/Images/Icons.png"
     mc:Ignorable="d">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="95*" />
+            <RowDefinition Height="63*" />
+        </Grid.RowDefinitions>
         <TextBox
-            Width="159"
-            Height="42"
-            Margin="83,169,0,0"
+            x:Name="TxtBPhone"
+            Width="210"
+            Height="60"
+            Margin="137,254,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             HorizontalContentAlignment="Center"
             VerticalContentAlignment="Center"
-            BorderThickness="2,2,2,2"
-            Text="TextBox"
-            TextWrapping="Wrap" />
+            Background="#fdd7bd"
+            BorderBrush="Purple"
+            BorderThickness="3"
+            Cursor="Pen"
+            Foreground="DeepPink"
+            MaxLength="12"
+            TextWrapping="Wrap"
+            ToolTip="Номер вашего телефона не более 11 символов,включая &quot;+&quot;" />
         <TextBox
-            Width="160"
-            Height="42"
-            Margin="0,68,0,0"
+            x:Name="TxtBoxName"
+            Width="210"
+            Height="60"
+            Margin="0,254,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
             HorizontalContentAlignment="Center"
             VerticalContentAlignment="Center"
-            BorderThickness="2"
-            Text="TextBox"
+            Background="#fdd7bd"
+            BorderBrush="Purple"
+            BorderThickness="3"
+            Cursor="Pen"
+            Foreground="DeepPink"
             TextWrapping="Wrap" />
         <TextBox
-            Width="160"
-            Height="42"
-            Margin="557,169,0,0"
+            x:Name="TxtBoxEmail"
+            Width="210"
+            Height="60"
+            Margin="751,254,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             HorizontalContentAlignment="Center"
             VerticalContentAlignment="Center"
-            BorderThickness="2,2,2,2"
-            Text="TextBox"
+            Background="#fdd7bd"
+            BorderBrush="Purple"
+            BorderThickness="3"
+            Cursor="Pen"
+            Foreground="DeepPink"
             TextWrapping="Wrap" />
         <TextBox
-            Width="160"
-            Height="42"
-            Margin="0,169,0,0"
+            x:Name="TxTboxTEMA"
+            Width="210"
+            Height="60"
+            Margin="0,122,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
             HorizontalContentAlignment="Center"
             VerticalContentAlignment="Center"
-            BorderThickness="2,2,2,2"
-            Text="TextBox"
-            TextWrapping="Wrap" />
+            Background="#fdd7bd"
+            BorderBrush="Purple"
+            BorderThickness="3"
+            Foreground="DeepPink"
+            MaxLength="15"
+            TextWrapping="Wrap"
+            ToolTip="Тема вашего сообщения не более 15 символов!" />
         <Label
+            x:Name="LbEmail"
             Height="37"
-            Margin="141,129,0,0"
+            Margin="800,217,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Content="Label" />
+            Content="Ваш Email"
+            FontSize="22" />
         <Label
+            x:Name="LbName"
             Height="37"
-            Margin="0,129,0,0"
+            Margin="0,217,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
-            Content="Label" />
+            Content="Ваше имя"
+            FontSize="22" />
         <Label
-            Height="27"
-            Margin="0,26,0,0"
+            x:Name="LbTema"
+            Height="37"
+            Margin="0,85,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
-            Content="Label" />
+            Content="Тема вашего сообщения"
+            FontSize="22" />
         <Label
+            x:Name="LbPnone"
             Height="37"
-            Margin="622,129,0,0"
+            Margin="119,217,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Content="Label" />
+            Content="Ваш номер телеофона"
+            FontSize="22" />
         <Button
-            Width="102"
-            Height="37"
-            Margin="0,387,0,0"
+            Grid.Row="1"
+            Width="210"
+            Height="60"
+            Margin="0,176,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
-            BorderThickness="2"
-            Content="Отправить" />
+            Background="#fdd7bd"
+            BorderBrush="Purple"
+            BorderThickness="3"
+            Content="Отправить"
+            Cursor="Hand"
+            FontSize="22" />
         <Button
-            Margin="730,392,0,0"
+            Grid.Row="1"
+            Width="66"
+            Height="41"
+            Margin="994,186,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            BorderThickness="2"
+            Background="#fdd7bd"
+            BorderBrush="Purple"
+            BorderThickness="3"
             Click="Button_Click"
-            Content="Назад" />
+            Content="Назад"
+            Cursor="Hand"
+            FontSize="20" />
         <TextBox
-            Width="634"
-            Height="140"
-            Margin="0,232,0,0"
+            x:Name="TxtBoTZIV"
+            Grid.RowSpan="2"
+            Width="826"
+            Height="192"
+            Margin="0,342,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
             HorizontalContentAlignment="Center"
             VerticalContentAlignment="Center"
-            BorderThickness="2,2,2,2"
-            Text="TextBox"
+            Background="#fdd7bd"
+            BorderBrush="Purple"
+            BorderThickness="4"
             TextWrapping="Wrap" />
+        <Image
+            x:Name="ImageHELPWIN1"
+            Grid.RowSpan="2"
+            Width="78"
+            Height="76"
+            Margin="874,346,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            RenderTransformOrigin="0.5,0.5"
+            Source="/Images/1HW.png">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform Angle="17.889" />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image
+            x:Name="ImageHELPWIN2"
+            Width="142"
+            Height="140"
+            Margin="872,62,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Source="/Images/2HW.png" />
+        <Image
+            x:Name="ImageHELPWIN3"
+            Grid.RowSpan="2"
+            Width="100"
+            Height="100"
+            Margin="17,292,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Source="/Images/3HW.png" />
+        <Image
+            x:Name="ImageHELPWIN4"
+            Grid.Row="1"
+            Width="100"
+            Height="100"
+            Margin="17,126,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Source="/Images/4HW.png" />
+        <Image
+            x:Name="ImageHELPWIN5"
+            Grid.Row="1"
+            Width="86"
+            Height="83"
+            Margin="986,16,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Source="/Images/5HW.png" />
+        <Image
+            x:Name="ImageHELPWIN6"
+            Width="100"
+            Height="100"
+            Margin="144,82,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Source="/Images/6HW.png" />
+        <Label
+            x:Name="LbOTZIV"
+            Margin="0,10,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Content="Свяжитесь с нами!"
+            FontSize="36"
+            FontWeight="Bold" />
+
 
     </Grid>
 </Window>
