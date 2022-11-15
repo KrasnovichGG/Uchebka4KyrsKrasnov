@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Uchebka4KyrsKrasnov"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Главная" Height="650" Width="1150" Icon="/Images/Icons.png">
     <Grid>
-        
+        <ListView d:ItemsSource="{d:SampleData ItemCount=5}" Margin="145,107,145,67">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="BtnMyProfile" Content="Мой профиль!" HorizontalAlignment="Left" Margin="29,23,0,0" VerticalAlignment="Top" Height="42" Width="125"/>
+        <Label x:Name="LbSort" Content="Сортировать по :" HorizontalAlignment="Left" Margin="227,31,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="CmbsORT" HorizontalAlignment="Left" Margin="361,33,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="LBpOISK" Content="Поиск по слову :" HorizontalAlignment="Left" Margin="532,31,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="CmbPoiskNAME" HorizontalAlignment="Left" Margin="658,33,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnWORDDay" Content="Слово дня" HorizontalAlignment="Left" Margin="912,17,0,0" VerticalAlignment="Top" Height="54" Width="170"/>
+        <Button x:Name="BtnADDWORD" Content="Добавить слово!" HorizontalAlignment="Left" Margin="58,578,0,0" VerticalAlignment="Top" Height="46" Width="286"/>
+        <Button x:Name="BtnRemoveWord" Content="Удалить слово!" HorizontalAlignment="Left" Margin="421,584,0,0" VerticalAlignment="Top" Height="34" Width="190"/>
+        <Button x:Name="BtnRedaktWord" Content="Редактировать слово!" HorizontalAlignment="Left" Margin="764,580,0,0" VerticalAlignment="Top" Height="33" Width="175"/>
+
     </Grid>
 </Window>
