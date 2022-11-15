@@ -36,5 +36,11 @@ namespace Uchebka4KyrsKrasnov.RegAndLog
             WinHelp winHelp = new WinHelp();
             winHelp.ShowDialog();
         }
+
+        private void BtnLogUser_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = new MainWindow();
+            window.Show();
+        }
     }
 }

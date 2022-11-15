@@ -105,7 +105,7 @@
             FontFamily="Comic Sans MS"
             FontSize="14"
             Foreground="#3F2A1D"
-            ToolTip="Нажмите для входа в приложение!" />
+            ToolTip="Нажмите для входа в приложение!" Click="BtnLogUser_Click" />
         <Button
             x:Name="BtnHelpUser"
             Grid.Row="2"

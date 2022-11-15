@@ -10,27 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Uchebka4KyrsKrasnov.AllWindows;
 
-namespace Uchebka4KyrsKrasnov
+namespace Uchebka4KyrsKrasnov.AllWindows
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для WinUserProf.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WinUserProf : Window
     {
-        public MainWindow()
+        public WinUserProf()
         {
             InitializeComponent();
         }
 
-        private void BtnMyProfile_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            WinUserProf winUserProf = new WinUserProf();
-            winUserProf.ShowDialog(); ;
-
+            Close();
         }
     }
 }

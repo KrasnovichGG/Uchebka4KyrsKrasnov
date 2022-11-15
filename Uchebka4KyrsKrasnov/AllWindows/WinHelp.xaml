@@ -14,8 +14,7 @@
     mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="95*" />
-            <RowDefinition Height="63*" />
+            <RowDefinition />
         </Grid.RowDefinitions>
         <TextBox
             x:Name="TxtBPhone"
@@ -117,10 +116,9 @@
             Content="Ваш номер телеофона"
             FontSize="22" />
         <Button
-            Grid.Row="1"
             Width="210"
             Height="60"
-            Margin="0,176,0,0"
+            Margin="0,556,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
             Background="#fdd7bd"
@@ -130,10 +128,9 @@
             Cursor="Hand"
             FontSize="22" />
         <Button
-            Grid.Row="1"
             Width="66"
             Height="41"
-            Margin="994,186,0,0"
+            Margin="994,566,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Background="#fdd7bd"
@@ -145,7 +142,6 @@
             FontSize="20" />
         <TextBox
             x:Name="TxtBoTZIV"
-            Grid.RowSpan="2"
             Width="826"
             Height="192"
             Margin="0,342,0,0"
@@ -161,7 +157,6 @@
             ToolTip="Не более 1000 символов на обращение!" />
         <Image
             x:Name="ImageHELPWIN1"
-            Grid.RowSpan="2"
             Width="78"
             Height="76"
             Margin="874,346,0,0"
@@ -188,7 +183,6 @@
             Source="/Images/2HW.png" />
         <Image
             x:Name="ImageHELPWIN3"
-            Grid.RowSpan="2"
             Width="100"
             Height="100"
             Margin="17,292,0,0"
@@ -197,19 +191,17 @@
             Source="/Images/3HW.png" />
         <Image
             x:Name="ImageHELPWIN4"
-            Grid.Row="1"
             Width="100"
             Height="100"
-            Margin="17,126,0,0"
+            Margin="17,506,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Source="/Images/4HW.png" />
         <Image
             x:Name="ImageHELPWIN5"
-            Grid.Row="1"
             Width="86"
             Height="83"
-            Margin="986,16,0,0"
+            Margin="986,396,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Source="/Images/5HW.png" />
