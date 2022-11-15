@@ -48,7 +48,9 @@
             BorderThickness="3"
             Cursor="Pen"
             Foreground="DeepPink"
-            TextWrapping="Wrap" />
+            MaxLength="15"
+            TextWrapping="Wrap"
+            ToolTip="Ваше имя:)" />
         <TextBox
             x:Name="TxtBoxEmail"
             Width="210"
@@ -63,7 +65,9 @@
             BorderThickness="3"
             Cursor="Pen"
             Foreground="DeepPink"
-            TextWrapping="Wrap" />
+            MaxLength="30"
+            TextWrapping="Wrap"
+            ToolTip="Ваше Email!" />
         <TextBox
             x:Name="TxTboxTEMA"
             Width="210"
@@ -152,7 +156,9 @@
             Background="#fdd7bd"
             BorderBrush="Purple"
             BorderThickness="4"
-            TextWrapping="Wrap" />
+            MaxLength="1000"
+            TextWrapping="Wrap"
+            ToolTip="Не более 1000 символов на обращение!" />
         <Image
             x:Name="ImageHELPWIN1"
             Grid.RowSpan="2"
