@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:Uchebka4KyrsKrasnov.RegAndLog"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="Регистрация"
-    Width="1100"
+    Width="1435"
     Height="630"
     FontFamily="Comic Sans MS"
     FontSize="15"
@@ -20,9 +20,8 @@
             <RowDefinition Height="9*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="427*" />
-            <ColumnDefinition Width="634*" />
-            <ColumnDefinition Width="39*" />
+            <ColumnDefinition Width="557*" />
+            <ColumnDefinition Width="878*" />
         </Grid.ColumnDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="/Images/RegImage.png" />
@@ -49,7 +48,7 @@
             VerticalContentAlignment="Center"
             Background="#F2EBE9"
             BorderBrush="Red"
-            BorderThickness="2,2,2,2.3"
+            BorderThickness="2"
             Cursor="Pen"
             MaxLength="25"
             TextWrapping="Wrap"
@@ -66,7 +65,7 @@
             VerticalContentAlignment="Center"
             Background="#F2EBE9"
             BorderBrush="Blue"
-            BorderThickness="2,2,2,2.3"
+            BorderThickness="2"
             Cursor="Pen"
             MaxLength="11"
             TextWrapping="Wrap"
@@ -76,7 +75,7 @@
             Grid.Column="1"
             Width="260"
             Height="102"
-            Margin="325,351,0,0"
+            Margin="476,338,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             HorizontalContentAlignment="Center"
@@ -109,7 +108,7 @@
             Grid.Column="1"
             Width="138"
             Height="31"
-            Margin="386,320,0,0"
+            Margin="537,307,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Напишите о себе!" />
@@ -123,7 +122,7 @@
             Background="#F2EBE9"
             BorderBrush="Black"
             BorderThickness="2">
-            <Image x:Name="Image_USER"  />
+            <Image x:Name="Image_USER" Stretch="UniformToFill" />
         </Border>
         <Label
             x:Name="lbImageUser"
@@ -145,7 +144,8 @@
             Background="#F2EBE9"
             BorderBrush="Black"
             BorderThickness="2"
-            Content="Добавить фото" Click="BtnAddImageToWin_Click" />
+            Click="BtnAddImageToWin_Click"
+            Content="Добавить фото" />
         <Button
             x:Name="BtnSaveDB"
             Grid.Column="1"
@@ -157,18 +157,72 @@
             Background="#F2EBE9"
             BorderBrush="Red"
             BorderThickness="2"
+            Click="BtnSaveDB_Click"
             Content="Зарегистрироваться" />
         <Button
             x:Name="Btnback"
             Grid.Column="1"
             Width="60"
             Height="34"
-            Margin="525,536,0,0"
+            Margin="763,536,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Background="#F2EBE9"
             BorderBrush="Green"
             BorderThickness="2"
-            Content="Назад" Click="Btnback_Click" />
+            Click="Btnback_Click"
+            Content="Назад" />
+        <TextBox
+            x:Name="txtBoxEmailUser"
+            Grid.Column="1"
+            Width="211"
+            Height="48"
+            Margin="612,135,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Background="#F2EBE9"
+            BorderBrush="Red"
+            BorderThickness="2"
+            Cursor="Pen"
+            MaxLength="25"
+            TextWrapping="Wrap"
+            ToolTip="Максимальное значение ввода символов 25!" />
+        <Label
+            x:Name="LbEmailUser"
+            Grid.Column="1"
+            Width="80"
+            Height="31"
+            Margin="677,104,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Ваш Email" />
+        <TextBox
+            x:Name="TxtBoxPassword"
+            Grid.Column="1"
+            Width="211"
+            Height="48"
+            Margin="612,240,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Background="#F2EBE9"
+            BorderBrush="Blue"
+            BorderThickness="2"
+            Cursor="Pen"
+            MaxLength="10"
+            TextWrapping="Wrap"
+            ToolTip="Пароль не более 10 символов!!" />
+        <Label
+            x:Name="LbPassword"
+            Grid.Column="1"
+            Width="102"
+            Height="31"
+            Margin="667,209,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Ваш Пароль" />
     </Grid>
 </Window>

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Uchebka4KyrsKrasnov.AllWindows;
+using Uchebka4KyrsKrasnov.DBword;
 
 namespace Uchebka4KyrsKrasnov
 {
@@ -21,9 +22,11 @@ namespace Uchebka4KyrsKrasnov
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
+            LstALLword.ItemsSource = App.word_Slovardb.Word.ToList();
         }
 
         private void BtnMyProfile_Click(object sender, RoutedEventArgs e)
@@ -31,6 +34,13 @@ namespace Uchebka4KyrsKrasnov
             WinUserProf winUserProf = new WinUserProf();
             winUserProf.ShowDialog(); ;
 
+        }
+
+        private void BtnADDWORD_Click(object sender, RoutedEventArgs e)
+        {
+            WinAddWord winAddWord = new WinAddWord();
+            winAddWord.AddWord += () => { LstALLword.ItemsSource = App.word_Slovardb.Word.ToList(); };
+            winAddWord.ShowDialog();
         }
     }
 }

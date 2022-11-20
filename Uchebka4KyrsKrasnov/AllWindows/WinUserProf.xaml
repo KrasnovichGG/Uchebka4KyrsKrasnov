@@ -41,6 +41,7 @@
             <Image
                 x:Name="ImageUserProf"
                 Cursor="None"
+                Stretch="UniformToFill"
                 ToolTip="Простите фото изменить не получится!" />
         </Border>
         <Label
@@ -73,7 +74,7 @@
             BorderBrush="Orange"
             BorderThickness="4"
             Cursor="No"
-            FontSize="36"
+            FontSize="24"
             FontWeight="Bold"
             IsReadOnly="True"
             TextWrapping="Wrap" />
@@ -99,7 +100,7 @@
             BorderBrush="Orange"
             BorderThickness="4"
             Cursor="No"
-            FontSize="36"
+            FontSize="24"
             FontWeight="Bold"
             IsReadOnly="True"
             TextWrapping="Wrap" />
@@ -107,7 +108,7 @@
             x:Name="LbPhoneUser"
             Grid.Row="1"
             Grid.Column="1"
-            Margin="0,325,0,0"
+            Margin="0,346,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
             Content="Ваш телефон" />
@@ -117,7 +118,7 @@
             Grid.Column="1"
             Width="264"
             Height="71"
-            Margin="0,368,0,0"
+            Margin="0,389,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
             HorizontalContentAlignment="Center"
@@ -125,7 +126,7 @@
             BorderBrush="Orange"
             BorderThickness="4"
             Cursor="No"
-            FontSize="36"
+            FontSize="24"
             FontWeight="Bold"
             IsReadOnly="True"
             TextWrapping="Wrap" />
@@ -143,9 +144,10 @@
             Grid.Row="1"
             Grid.Column="2"
             Width="258"
-            Height="348"
+            Height="222"
+            Margin="0,91,0,0"
             HorizontalAlignment="Center"
-            VerticalAlignment="Center"
+            VerticalAlignment="Top"
             HorizontalContentAlignment="Center"
             VerticalContentAlignment="Center"
             BorderBrush="Black"
@@ -154,11 +156,12 @@
             IsReadOnly="True"
             TextWrapping="Wrap" />
         <Button
+            x:Name="btnBack"
             Grid.Row="1"
             Grid.Column="1"
             Width="163"
             Height="47"
-            Margin="101,465,0,0"
+            Margin="101,486,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             BorderBrush="ForestGreen"
@@ -193,6 +196,32 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Source="/Images/3UP.png" />
+        <TextBox
+            x:Name="txtbroverka"
+            Grid.Row="1"
+            Grid.Column="2"
+            Width="258"
+            Height="71"
+            Margin="0,389,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            BorderBrush="Orange"
+            BorderThickness="4"
+            Cursor="No"
+            FontSize="24"
+            FontWeight="Bold"
+            IsReadOnly="True"
+            TextWrapping="Wrap" />
+        <Label
+            x:Name="LBStatus"
+            Grid.Row="1"
+            Grid.Column="2"
+            Margin="0,346,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Content="Ваш Статус" />
 
 
     </Grid>

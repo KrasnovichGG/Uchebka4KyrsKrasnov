@@ -14,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Uchebka4KyrsKrasnov.DBword;
 
 namespace Uchebka4KyrsKrasnov.RegAndLog
 {
@@ -31,7 +32,34 @@ namespace Uchebka4KyrsKrasnov.RegAndLog
         {
             Close();
         }
+        public void Contains()
+        {
+            var user = App.word_Slovardb.Auth.Where(x =>x.Email_User == txtBoxEmailUser.Text && x.Password == TxtBoxPassword.Text).FirstOrDefault();
+            if (user != null)
+            {
+                throw new Exception("Такой пользователь уже сущесвует пожалуста введите другие данные!");
+            }
 
+        }
+        public bool ProverkaProbel()
+        {
+            if(TxtBCommentUser.Text.Trim() == "" || TxtbRegPhone.Text.Trim() == "" || TxtBCommentUser.Text.Trim() == "" || txtBoxEmailUser.Text.Trim() == "" || TxtBoxPassword.Text.Trim() == "" || Image_USER.Source == null)
+            {
+                MessageBox.Show("Пожалуйства введите все данные!","Что-то не так!",MessageBoxButton.OK,MessageBoxImage.Error);
+                return true;
+            }
+            return false;
+        }
+        public void ClearBoxes()
+        {
+            TxtbRegName.Clear();
+            TxtbRegPhone.Clear();
+            TxtBCommentUser.Clear();
+            txtBoxEmailUser.Clear();
+            TxtBoxPassword.Clear();
+            Image_USER.Source = null;
+        }
+        //Нужна проверка на невыбранное изображеник
         private void BtnAddImageToWin_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -40,6 +68,42 @@ namespace Uchebka4KyrsKrasnov.RegAndLog
                 FilePath = openFileDialog.FileName;
                 Image_USER.Source = new Bitmap(openFileDialog.FileName).BitmapToImageSource();
             }
+        }
+
+        private void BtnSaveDB_Click(object sender, RoutedEventArgs e)
+        {
+           
+            try
+            {
+                if (ProverkaProbel())
+                    return;
+                Contains();
+                User user = new User()
+                {
+                    Name_User = TxtbRegName.Text.Trim(),
+                    Information_User = TxtBCommentUser.Text.Trim(),
+                    Phone = TxtbRegPhone.Text.Trim(),
+                    Image = File.ReadAllBytes(FilePath),
+                };
+                App.word_Slovardb.User.Add(user);
+                App.word_Slovardb.SaveChanges();
+                Auth auth = new Auth()
+                {
+                    Email_User = TxtbRegName.Text.Trim(),
+                    Password = TxtBoxPassword.Text.Trim(),
+                    Role = App.word_Slovardb.Role.Where(x => x.Id_Role == 2).FirstOrDefault(),
+                    Id_User = user.Id_User
+                };
+                App.word_Slovardb.Auth.Add(auth);
+                App.word_Slovardb.SaveChanges();
+                MessageBox.Show("Успешно!");
+                ClearBoxes();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
     static class Extensions
