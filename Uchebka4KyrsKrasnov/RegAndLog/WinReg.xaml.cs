@@ -59,7 +59,6 @@ namespace Uchebka4KyrsKrasnov.RegAndLog
             TxtBoxPassword.Clear();
             Image_USER.Source = null;
         }
-        //Нужна проверка на невыбранное изображеник
         private void BtnAddImageToWin_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();

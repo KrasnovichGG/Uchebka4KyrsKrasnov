@@ -20,18 +20,30 @@
             Margin="146,122,144,154"
             BorderBrush="#32e56e"
             BorderThickness="5"
-            FontSize="20"
-            ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+            FontSize="10">
+            <!--<ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                    <TextBlock/>
+                    <TextBlock/></StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>-->
             <ListView.View>
                 <GridView>
                     <GridViewColumn
-                        Width="120"
+                        Width="200"
                         DisplayMemberBinding="{Binding Value_Word}"
                         Header="Слово" />
                     <GridViewColumn
-                        Width="650"
+                        Width="1200"
                         DisplayMemberBinding="{Binding Transcription_Word}"
-                        Header="Транскрипция" />
+                        Header="Транскрипция">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock IsEnabled="True" Text="{Binding Transcription_Word}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
@@ -132,14 +144,37 @@
             Content="Выход на авторизацию!"
             Cursor="Hand"
             FontSize="16" />
-        <StackPanel
+        <Grid
             x:Name="SlovoDnyPnl"
             Width="450"
             Height="200"
             Background="AliceBlue"
-            Visibility="Hidden">
-            <TextBlock x:Name="WordTxt" />
-        </StackPanel>
+            Visibility="Collapsed">
+            <TextBlock
+                Margin="0,0,0,20"
+                HorizontalAlignment="Center"
+                FontSize="20"
+                Text="Слово дня" />
+            <TextBlock
+                x:Name="DateTxt"
+                Margin="0,20,0,0"
+                HorizontalAlignment="Center"
+                FontSize="20"
+                Text="" />
+            <TextBlock
+                x:Name="WordTxt"
+                Margin="0,20,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="30" />
+            <TextBlock
+                x:Name="TransTxt"
+                Margin="0,80,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="10"
+                TextWrapping="WrapWithOverflow" />
+        </Grid>
         <TextBox
             x:Name="TxtbPoisk"
             Width="125"

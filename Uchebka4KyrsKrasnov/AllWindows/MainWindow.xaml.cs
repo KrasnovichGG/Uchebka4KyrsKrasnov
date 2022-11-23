@@ -27,6 +27,8 @@ namespace Uchebka4KyrsKrasnov
     {
         DateTime todayDay = DateTime.Now;
         string dayWord;
+        string trans;
+        public static bool isAdmin = true;
         DateTime LastDay = DateTime.Now;
         string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal) + "Test.txt";
         List<Word> workList = new List<Word>();
@@ -54,6 +56,7 @@ namespace Uchebka4KyrsKrasnov
             using (StreamReader sr = new StreamReader(path))
             {
                 var ab = sr.ReadLine();
+
                 if (ab.ToString() == null)
                 {
                     sr.Close();
@@ -62,6 +65,7 @@ namespace Uchebka4KyrsKrasnov
                 var a = ab.ToString();
                 string[] arr = a.Split(';');
                 dayWord = arr[0];
+                trans = arr[2];
                 return Convert.ToDateTime(arr[1]);
             }
         }
@@ -89,7 +93,7 @@ namespace Uchebka4KyrsKrasnov
             {
                 BtnRemoveWord.Visibility = Visibility.Hidden;
                 BtnADDWORD.Visibility = Visibility.Hidden;
-                LstALLword.IsEnabled = false;
+                isAdmin = false;
             }
         }
 
@@ -181,12 +185,15 @@ namespace Uchebka4KyrsKrasnov
                 Random RND = new Random();
                 var lst = App.word_Slovardb.Word.ToList();
                 SlovoDnyPnl.Visibility = Visibility.Visible;
-                WordTxt.Text = (lst[RND.Next(0, lst.Count)].Value_Word);
+                var er = (lst[RND.Next(0, lst.Count)]);
+                WordTxt.Text = er.Value_Word;
+                TransTxt.Text = er.Transcription_Word;
+                DateTxt.Text = LastDay.Date.ToString();
                 await Task.Run(() => Thread.Sleep(5000));
                 SlovoDnyPnl.Visibility = Visibility.Collapsed;
                 using (StreamWriter sw = new StreamWriter(path))
                 {
-                    sw.WriteLine(WordTxt.Text + ";" + todayDay);
+                    sw.WriteLine(WordTxt.Text + ";" + todayDay + ";" + TransTxt.Text);
                 }
             }
             else
@@ -194,6 +201,8 @@ namespace Uchebka4KyrsKrasnov
                 var lst = App.word_Slovardb.Word.ToList();
                 SlovoDnyPnl.Visibility = Visibility.Visible;
                 WordTxt.Text = dayWord;
+                TransTxt.Text = trans;
+                DateTxt.Text = todayDay.ToString();
                 await Task.Run(() => Thread.Sleep(5000));
                 SlovoDnyPnl.Visibility = Visibility.Collapsed;
             }
