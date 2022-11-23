@@ -16,7 +16,7 @@
     mc:Ignorable="d">
     <Grid>
         <Grid.Background>
-            <ImageBrush Opacity="0.7" ImageSource="/Images/LogImages.png" />
+            <ImageBrush ImageSource="/Images/LogImages.png" Opacity="0.7" />
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="32*" />
@@ -100,26 +100,13 @@
             Background="#F2EBE9"
             BorderBrush="#3F2A1D"
             BorderThickness="2"
+            Click="BtnLogUser_Click"
             Content="Войти"
             Cursor="Hand"
             FontFamily="Comic Sans MS"
             FontSize="14"
             Foreground="#3F2A1D"
-            ToolTip="Нажмите для входа в приложение!" Click="BtnLogUser_Click" />
-        <Button
-            x:Name="BtnHelpUser"
-            Grid.Row="2"
-            Width="116"
-            Height="43"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Background="#F2EBE9"
-            BorderBrush="#3F2A1D"
-            BorderThickness="2"
-            Content="Нужна помощь?"
-            Cursor="Hand"
-            FontSize="14"
-            ToolTip="Нажмите для отправки отзыва о словаре!" Click="BtnHelpUser_Click" />
+            ToolTip="Нажмите для входа в приложение!" />
         <Button
             x:Name="BtnRegUser"
             Grid.Row="2"
@@ -131,11 +118,12 @@
             Background="#F2EBE9"
             BorderBrush="#3F2A1D"
             BorderThickness="2"
+            Click="BtnRegUser_Click"
             Content="Регистрация"
             Cursor="Hand"
             FontSize="14"
             Foreground="#3F2A1D"
-            ToolTip="Нажмите для регистрации нового пользователя в приложении!" Click="BtnRegUser_Click" />
+            ToolTip="Нажмите для регистрации нового пользователя в приложении!" />
         <Label
             x:Name="LbLoginUser"
             Grid.Row="1"

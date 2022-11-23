@@ -8,6 +8,7 @@
     Title="Ваш профиль"
     Width="1050"
     Height="700"
+    Background="Azure"
     FontFamily="Comic Sans MS"
     FontSize="20"
     Icon="/Images/Icons.png"

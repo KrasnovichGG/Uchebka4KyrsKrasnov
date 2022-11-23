@@ -68,6 +68,9 @@
     <Compile Include="AllWindows\WinAddWord.xaml.cs">
       <DependentUpon>WinAddWord.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AllWindows\WinDeleteWord.xaml.cs">
+      <DependentUpon>WinDeleteWord.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AllWindows\WinHelp.xaml.cs">
       <DependentUpon>WinHelp.xaml</DependentUpon>
     </Compile>
@@ -123,6 +126,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="AllWindows\WinAddWord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AllWindows\WinDeleteWord.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -228,6 +235,9 @@
       <DependentUpon>ModelWORDdb.edmx</DependentUpon>
       <LastGenOutput>ModelWORDdb.cs</LastGenOutput>
     </Content>
+    <Resource Include="Images\dele1.png" />
+    <Resource Include="Images\dele2.png" />
+    <Resource Include="Images\ad2.png" />
     <Resource Include="Images\o6.png" />
     <Resource Include="Images\o5.png" />
     <Resource Include="Images\04.png" />

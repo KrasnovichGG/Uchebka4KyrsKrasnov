@@ -16,5 +16,6 @@ namespace Uchebka4KyrsKrasnov
     {
         public static Word_SlovarEntities word_Slovardb = new Word_SlovarEntities();
         public static User user;
+        public static Role role;
     }
 }

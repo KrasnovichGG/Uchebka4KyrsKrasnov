@@ -8,6 +8,7 @@
     Title="Главная"
     Width="1150"
     Height="672"
+    Background="Azure"
     FontFamily="Comic Sans MS"
     Icon="/Images/Icons.png"
     ResizeMode="NoResize"
@@ -16,16 +17,23 @@
     <Grid>
         <ListView
             x:Name="LstALLword"
-            Margin="145,107,145,169"
+            Margin="146,122,144,154"
             BorderBrush="#32e56e"
             BorderThickness="5"
-            FontSize="20">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding Value_Word}" />
-                    <!--<TextBlock Text="{Binding Transcription_Word}"/>-->
-                </DataTemplate>
-            </ListView.ItemTemplate>
+            FontSize="20"
+            ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn
+                        Width="120"
+                        DisplayMemberBinding="{Binding Value_Word}"
+                        Header="Слово" />
+                    <GridViewColumn
+                        Width="650"
+                        DisplayMemberBinding="{Binding Transcription_Word}"
+                        Header="Транскрипция" />
+                </GridView>
+            </ListView.View>
         </ListView>
         <Button
             x:Name="BtnMyProfile"
@@ -61,7 +69,8 @@
             BorderBrush="Black"
             BorderThickness="2"
             Cursor="Hand"
-            FontSize="14" />
+            FontSize="14"
+            SelectionChanged="CmbsORT_SelectionChanged" />
         <Label
             x:Name="LBpOISK"
             Height="34"
@@ -80,6 +89,7 @@
             Background="#e0f745"
             BorderBrush="#32e56e"
             BorderThickness="3"
+            Click="btnWORDDay_Click"
             Content="Слово дня"
             Cursor="Hand"
             FontSize="16" />
@@ -105,31 +115,31 @@
             VerticalAlignment="Top"
             Background="#e0f745"
             BorderBrush="#32e56e"
+            Click="BtnRemoveWord_Click"
             Content="Удалить слово!"
             Cursor="Hand"
             FontSize="16" />
         <Button
-            x:Name="BtnRedaktWord"
+            x:Name="btnVixodinAutariz"
             Width="225"
             Height="64"
-            Margin="780,534,0,0"
+            Margin="766,534,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Background="#e0f745"
             BorderBrush="#32e56e"
-            Content="Редактировать слово!"
+            Click="btnVixodinAutariz_Click"
+            Content="Выход на авторизацию!"
             Cursor="Hand"
-            FontSize="16"
-            RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform />
-                    <SkewTransform />
-                    <RotateTransform Angle="-0.08" />
-                    <TranslateTransform />
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
+            FontSize="16" />
+        <StackPanel
+            x:Name="SlovoDnyPnl"
+            Width="450"
+            Height="200"
+            Background="AliceBlue"
+            Visibility="Hidden">
+            <TextBlock x:Name="WordTxt" />
+        </StackPanel>
         <TextBox
             x:Name="TxtbPoisk"
             Width="125"
@@ -143,6 +153,7 @@
             BorderThickness="2"
             Cursor="Pen"
             FontSize="14"
+            TextChanged="TxtbPoisk_TextChanged"
             TextWrapping="Wrap" />
         <Image
             x:Name="imageo1"
@@ -180,6 +191,17 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
+        <Button
+            x:Name="ClearBtn"
+            Width="34"
+            Height="34"
+            Margin="557,44,519,556"
+            Background="Yellow"
+            BorderBrush="Green"
+            BorderThickness="2"
+            Click="ClearBtn_Click"
+            Content="X"
+            ToolTip="Если хотите отменить сортировку нажмите на эту кнопку!" />
         <Image
             x:Name="imaheo3"
             Width="115"
@@ -252,6 +274,32 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
+        <Button
+            x:Name="BtnHELPuSER"
+            Width="205"
+            Height="64"
+            Margin="145,534,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Background="#e0f745"
+            BorderBrush="#32e56e"
+            Click="BtnHELPuSER_Click"
+            Content="Нужна помощь?"
+            Cursor="Hand"
+            FontSize="16" />
+        <Button
+            x:Name="Btn_exit"
+            Width="226"
+            Height="64"
+            Margin="0,534,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Background="#e0f745"
+            BorderBrush="#32e56e"
+            Click="Btn_exit_Click"
+            Content="Выход из приложения!"
+            Cursor="Hand"
+            FontSize="16" />
 
     </Grid>
 </Window>
